@@ -71,6 +71,32 @@ Because `HelpDeskTest` is an authenticated user, this inherited permission overr
 ### Inherited Modify Permission
 <img width="762" height="516" alt="image" src="https://github.com/user-attachments/assets/e22a156f-b30a-40eb-809b-49b07618bae2" />
 
+### Inheritance Disabled
+
+I disabled inheritance on `SharedDocs` and converted the inherited permissions into explicit permissions.
+
+This allowed me to isolate the unwanted `Authenticated Users` entry without changing permissions on the parent folder.
+
+At this point, `Authenticated Users` still had **Modify** access, but it was no longer inherited.
+<img width="754" height="508" alt="image" src="https://github.com/user-attachments/assets/babe63a3-ac96-47bb-be21-6b284693c8d0" />
+
+### Permission Fix Applied
+
+I removed the explicit `Authenticated Users` **Modify** permission from `SharedDocs`.
+
+The final ACL now showed:
+
+- `HelpDeskTest` — Read & execute
+- `Users` — Read & execute
+- `Donovan` — Full control
+- `Administrators` — Full control
+- `SYSTEM` — Full control
+
+`Authenticated Users` no longer had Modify access.
+
+### Final ACL After Fix
+
+<img width="758" height="514" alt="image" src="https://github.com/user-attachments/assets/3c83fcb6-4d18-4bbb-aabb-17418391c533" />
 
 
 
