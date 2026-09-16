@@ -162,5 +162,36 @@ This matched the retest results: `HelpDeskTest` could still read files, but writ
 
 <img width="651" height="195" alt="image" src="https://github.com/user-attachments/assets/50938bcb-be52-4aec-b1f3-1d8fc87b45eb" />
 
+## Final Result
 
+The original read-only configuration did not work as expected because `HelpDeskTest` was still receiving inherited Modify access through the `Authenticated Users` group.
+
+After disabling inheritance, converting inherited permissions to explicit permissions, and removing the unwanted `Authenticated Users` Modify entry:
+
+- `HelpDeskTest` retained read access
+- file modification was blocked
+- file deletion required administrator approval
+- PowerShell write attempts returned Access Denied
+- the final ACL showed only Read & Execute access for the Standard user
+
+## What I Learned
+
+Direct permissions are not always the same as effective permissions. A user can receive additional access through group membership and inherited ACL entries.
+
+When the expected permission restriction did not work, checking the folder with `icacls` revealed that `Authenticated Users` was still granting Modify access.
+
+This lab showed why NTFS troubleshooting requires checking both direct and inherited permissions rather than only looking at the user's individual permission entry.
+
+## Skills Demonstrated
+
+- NTFS Permissions
+- Access Control Lists (ACLs)
+- Permission Inheritance
+- Effective Permissions
+- Windows File Security
+- `icacls`
+- Standard vs. Administrator Accounts
+- PowerShell
+- Access-Denied Troubleshooting
+- Root-Cause Analysis
 
