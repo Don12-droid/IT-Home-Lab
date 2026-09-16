@@ -88,5 +88,36 @@ I left other startup items unchanged because they were either required, already 
 
 <img width="760" height="566" alt="image" src="https://github.com/user-attachments/assets/14291dfd-a4ef-4c61-b46e-e9f70243118a" />
 
+## Final Result
 
+The simulated Windows performance issue was successfully identified and resolved.
+
+Task Manager showed that Windows PowerShell was consuming significantly more CPU than the other running processes. After ending the high-CPU PowerShell process, overall CPU usage dropped from approximately 37% to approximately 2%.
+
+I also reviewed Startup apps and identified Microsoft Edge as an enabled application with High startup impact. I disabled Edge from startup to reduce unnecessary background load during login.
+
+The system returned to a normal resource-usage state after the troubleshooting steps were completed.
+
+## What I Learned
+
+Task Manager can be used to quickly identify which processes are responsible for abnormal CPU, memory, disk, or network usage.
+
+Sorting processes by CPU usage made it easier to identify the process contributing most heavily to the slowdown.
+
+I also learned that startup applications can contribute to slower login and unnecessary background resource usage. Reviewing startup impact helps determine which nonessential applications may be appropriate to disable.
+
+Most importantly, I learned to verify the result after making a change rather than assuming the issue was resolved. In this lab, CPU usage dropped from approximately 37% to approximately 2% after the high-CPU process was terminated.
+
+## Skills Demonstrated
+
+- Windows Performance Troubleshooting
+- Task Manager
+- CPU Usage Analysis
+- Process Identification
+- Process Termination
+- Startup Application Management
+- Startup Impact Analysis
+- Windows Resource Monitoring
+- Troubleshooting Verification
+- Help-Desk Troubleshooting Methodology
 
