@@ -1,8 +1,8 @@
-# Lab 01: Windows Performance and Frozen Application Troubleshooting
+# Lab 01: Windows Performance and High-CPU Process Troubleshooting
 
 ## Objective
 
-Practice diagnosing a simulated Windows performance issue involving a slow user session and an unresponsive application.
+Practice diagnosing a simulated Windows performance issue involving elevated CPU usage and unnecessary startup applications.
 
 ## Environment
 
@@ -15,9 +15,9 @@ Practice diagnosing a simulated Windows performance issue involving a slow user 
 
 ## Scenario
 
-This home lab simulates a help-desk ticket where a user reports that Windows feels slow after login and an application has become unresponsive.
+This home lab simulates a help-desk ticket where a user reports that Windows feels slow after login.
 
-The goal is to inspect system resource usage, identify the affected process, safely terminate it, review startup applications, and verify that the system returns to a normal state.
+The goal is to inspect system resource usage, identify the process responsible for elevated CPU usage, terminate it safely, review startup applications, and verify that system performance returns to normal.
 
 ## Troubleshooting Timeline
 
