@@ -122,3 +122,22 @@ This confirmed that the Standard user no longer had Delete permission on the fol
 
 <img width="452" height="225" alt="image" src="https://github.com/user-attachments/assets/f3c84b3c-fff5-41c1-b525-961aea06cc44" />
 
+### Write Permission Test
+
+To verify that `HelpDeskTest` could no longer modify the file, I tested write access directly from PowerShell:
+
+```powershell
+Add-Content "C:\HelpDeskLab\SharedDocs\test-document.txt" "PowerShell write test"
+```
+
+PowerShell returned an **Access denied** error and `UnauthorizedAccessException`.
+
+This confirmed that the Standard user no longer had write permission to the file.
+
+### PowerShell Write Access Denied
+
+<img width="1108" height="605" alt="image" src="https://github.com/user-attachments/assets/3c650571-c5aa-4c9a-b8ec-b57ccec3240e" />
+
+
+
+
