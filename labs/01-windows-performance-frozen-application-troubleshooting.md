@@ -61,3 +61,32 @@ This confirmed that the abnormal PowerShell process was responsible for the elev
 
 <img width="756" height="577" alt="image" src="https://github.com/user-attachments/assets/1dbed951-28c6-4e5a-abd1-aa1fbb499c62" />
 
+## Reviewing Startup Applications
+
+I reviewed the Startup apps section in Task Manager to identify applications that could contribute to slower startup or increased background resource usage.
+
+Two enabled applications were marked with a High startup impact:
+
+- Microsoft Edge
+- OneDrive
+
+Other startup applications were either disabled, low impact, or not yet measured.
+
+### Startup Apps Review
+
+<img width="746" height="572" alt="image" src="https://github.com/user-attachments/assets/78164d5a-f9d9-4913-bfe2-f60ef040abb6" />
+
+## Reducing Startup Impact
+
+Microsoft Edge was enabled as a startup application and was marked with a High startup impact.
+
+Because Edge is not required for Windows to function, I disabled it from Startup apps to reduce unnecessary startup load.
+
+I left other startup items unchanged because they were either required, already disabled, or not necessary to modify for this lab.
+
+### Microsoft Edge Disabled at Startup
+
+<img width="760" height="566" alt="image" src="https://github.com/user-attachments/assets/14291dfd-a4ef-4c61-b46e-e9f70243118a" />
+
+
+
