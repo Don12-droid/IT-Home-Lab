@@ -65,7 +65,7 @@ The output also showed a recent Last logon timestamp, confirming that the accoun
 
 ### Account State Verification
 
-PASTE SCREENSHOT OF `net user HelpDeskTest` HERE
+<img width="614" height="520" alt="image" src="https://github.com/user-attachments/assets/ebecebc7-abdf-4641-9370-87ddda1304ce" />
 
 ## Final Result
 
