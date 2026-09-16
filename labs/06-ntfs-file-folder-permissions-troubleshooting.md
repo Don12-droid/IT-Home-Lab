@@ -138,6 +138,29 @@ This confirmed that the Standard user no longer had write permission to the file
 
 <img width="1108" height="605" alt="image" src="https://github.com/user-attachments/assets/3c650571-c5aa-4c9a-b8ec-b57ccec3240e" />
 
+## Final ACL Verification
+
+After removing the unwanted Modify permission, I checked the folder ACL again:
+
+```powershell
+icacls C:\HelpDeskLab\SharedDocs
+```
+
+The final ACL showed:
+
+- `HelpDeskTest` — `RX` (Read & Execute)
+- `Users` — `RX` (Read & Execute)
+- `Donovan` — Full Control
+- `Administrators` — Full Control
+- `SYSTEM` — Full Control
+
+The previous `Authenticated Users` Modify permission was no longer present.
+
+This matched the retest results: `HelpDeskTest` could still read files, but write and delete operations were blocked.
+
+### Final ACL
+
+<img width="651" height="195" alt="image" src="https://github.com/user-attachments/assets/50938bcb-be52-4aec-b1f3-1d8fc87b45eb" />
 
 
 
