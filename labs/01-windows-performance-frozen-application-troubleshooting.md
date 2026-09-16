@@ -47,3 +47,17 @@ Windows PowerShell was using approximately 22% CPU, making it the largest contri
 
 <img width="755" height="568" alt="image" src="https://github.com/user-attachments/assets/44778025-e28c-4ed0-92f9-6b072e073aa7" />
 
+## Resolving the High-CPU Process
+
+After identifying Windows PowerShell as the primary source of elevated CPU usage, I ended the high-CPU process through Task Manager.
+
+I then waited for system resource usage to stabilize and checked Task Manager again.
+
+CPU usage dropped from approximately 37% during the problem state to approximately 2%.
+
+This confirmed that the abnormal PowerShell process was responsible for the elevated CPU usage and that terminating it resolved the simulated performance issue.
+
+### Post-Resolution Verification
+
+<img width="756" height="577" alt="image" src="https://github.com/user-attachments/assets/1dbed951-28c6-4e5a-abd1-aa1fbb499c62" />
+
