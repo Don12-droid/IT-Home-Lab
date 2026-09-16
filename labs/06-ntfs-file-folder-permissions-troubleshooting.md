@@ -98,5 +98,27 @@ The final ACL now showed:
 
 <img width="758" height="514" alt="image" src="https://github.com/user-attachments/assets/3c83fcb6-4d18-4bbb-aabb-17418391c533" />
 
+## Verifying the Fix
 
+I signed back into `HelpDeskTest` and retested access to `SharedDocs`.
+
+The account could still access the folder, but an operation requiring Modify permission triggered a **Destination Folder Access Denied** prompt and required administrator confirmation.
+
+This showed that `HelpDeskTest` no longer had unrestricted Modify access through `Authenticated Users`.
+
+### Standard User Permission Restriction
+
+<img width="506" height="181" alt="image" src="https://github.com/user-attachments/assets/44566291-7185-45d3-8be3-74a72a2b77f9" />
+
+### Delete Permission Test
+
+While signed into `HelpDeskTest`, I attempted to delete `test document 2`.
+
+Windows blocked the operation and displayed **File Access Denied**, requiring administrator permission to continue.
+
+This confirmed that the Standard user no longer had Delete permission on the folder contents.
+
+### Delete Access Denied
+
+<img width="452" height="225" alt="image" src="https://github.com/user-attachments/assets/f3c84b3c-fff5-41c1-b525-961aea06cc44" />
 
