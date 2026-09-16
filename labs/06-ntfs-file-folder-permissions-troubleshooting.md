@@ -60,3 +60,17 @@ Because `HelpDeskTest` is an authenticated user, that inherited Modify permissio
 ### ACL Before Fix
 <img width="740" height="403" alt="image" src="https://github.com/user-attachments/assets/a8756345-803a-496b-8b86-fd32bf6b581d" />
 
+## Inspecting Inherited Permissions
+
+I opened **Advanced Security Settings** for `C:\HelpDeskLab\SharedDocs` to determine why the Standard user still had write access.
+
+The permissions list showed that `Authenticated Users` had **Modify** access inherited from `C:\`.
+
+Because `HelpDeskTest` is an authenticated user, this inherited permission overrode the expected read-only behavior.
+
+### Inherited Modify Permission
+<img width="762" height="516" alt="image" src="https://github.com/user-attachments/assets/e22a156f-b30a-40eb-809b-49b07618bae2" />
+
+
+
+
