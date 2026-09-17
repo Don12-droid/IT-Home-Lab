@@ -13,7 +13,7 @@ Practice troubleshooting a Windows device issue using Device Manager, driver inf
 
 ## Scenario
 
-This home lab simulates a help-desk ticket where a user reports that a hardware device is not working correctly.
+This home lab simulates a help-desk ticket involving a Windows device that is not functioning correctly.
 
 The goal is to inspect the device in Device Manager, review its status and driver information, perform a safe troubleshooting action, and verify normal operation afterward.
 
@@ -115,21 +115,13 @@ This confirmed that the device was disabled and that Windows correctly identifie
 
 ## Restoring the Device
 
-Device Manager provided an **Enable Device** option directly from the device properties window.
+Device Manager provided an **Enable Device** option after the audio device was disabled.
 
 I used this option to re-enable the High Definition Audio Device.
 
-After enabling the device, I reopened the General tab to verify the device status.
-
-I expected Windows to return the device to a normal working state.
-
-### Device Re-Enabled
-
-<img width="394" height="445" alt="image" src="https://github.com/user-attachments/assets/61e1d8e7-8a08-4589-beb5-1e1d34d96312" />
-
 ## Verification
 
-After the device was re-enabled, I checked the General tab again.
+After re-enabling the device, I reopened its properties and checked the General tab.
 
 Windows reported:
 
@@ -137,13 +129,51 @@ Windows reported:
 This device is working properly.
 ```
 
-This confirmed that the device had been successfully restored.
+This confirmed that the device had been successfully restored and that the Code 22 condition was resolved.
 
 ### Final Device Status
 
-PASTE FINAL WORKING STATUS SCREENSHOT HERE
+<img width="392" height="445" alt="image" src="https://github.com/user-attachments/assets/a68326f0-8aeb-4265-b619-2ce9d0b6cb18" />
 
+## Final Result
 
+The simulated device issue was successfully diagnosed and resolved.
+
+The High Definition Audio Device was initially functioning normally. After the device was intentionally disabled, Windows reported:
+
+```text
+This device is disabled. (Code 22)
+```
+
+Using Device Manager, I re-enabled the device and verified that Windows returned the status to:
+
+```text
+This device is working properly.
+```
+
+The lab demonstrated how Device Manager can be used to inspect device status, review driver information, identify a disabled-device error, and restore normal operation.
+
+## What I Learned
+
+Device Manager provides both device-status information and driver-management options that can help diagnose hardware-related issues.
+
+I learned that Code 22 indicates that a device has been disabled.
+
+I also learned that device-management changes require administrative privileges, while a standard user can still view device information.
+
+Most importantly, I verified the device state before and after making changes instead of assuming that the recovery action worked.
+
+## Skills Demonstrated
+
+- Windows Device Manager
+- Device Status Troubleshooting
+- Driver Inspection
+- Device Enable / Disable
+- Code 22 Troubleshooting
+- Administrator vs. Standard User Permissions
+- Windows Hardware Troubleshooting
+- Troubleshooting Verification
+- Help-Desk Troubleshooting Methodology
 
 
 
